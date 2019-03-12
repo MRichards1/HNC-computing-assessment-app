@@ -30,19 +30,19 @@ addBtn.addEventListener("click", function(event) {
   //if statement to check the input boxes are not null when the submit button is presses
   //if any of the boxes are null then a windowalert will pop up and the code will stop executing
   if (song_name === "") {   //if song_name = null
-    window.alert("Please enter data for all input fields");
+    alertInputField("song name")
     return;                 //this line stops all code after it from being resolved
   }
   else if (song_artist === "") {   //if song_artist = null
-    window.alert("Please enter data for all input fields");
+   alertInputField("song artist")
     return;                //this line stops all code after it from being resolved
   }
   else if (song_album === "") {    //if song_album = null
-    window.alert("Please enter data for all input fields");
+    alertInputField("song album")
     return;                //this line stops all code after it from being resolved
   }
   else if (song_release_date === "") {  //if song_release_date = null
-    window.alert("Please enter data for all input fields");
+    alertInputField("song release date")
     return;                //this line stops all code after it from being resolved
   }
 
@@ -146,3 +146,8 @@ clear.addEventListener("click", function (event) {                //listens for 
   finished_element.classList.remove("hidden")             //removes the 'hidden' class from the classlist of the form
   submit_button_element.classList.remove("hidden")        //removes the 'hidden' class from the classlist of the submit button
 })
+
+
+function alertInputField(inputField) {
+  window.alert(`Please enter data for in the ${inputField} input field`);
+}
